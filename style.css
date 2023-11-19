@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title{
+    text-align: center;
+    font-size: 2em;
+    color:#4e6385;
+    margin-bottom: 20px;
+    position:relative
+}
+
+.container .title::before {
+    content: '';
+    position: absolute;
+    left: 50%; /* Position it in the center */
+    bottom: 0;
+    transform: translateX(-50%); /* Center it horizontally */
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #ffb366, #4e6385);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    -webkit-font-smoothing:antialised;
+    -moz-osx-font-smoothing:grayscale;
+    background: linear-gradient();
+}
+.container{
+    width:100%;
+    height:100vh;
+    background: radial-gradient(circle, #ffb366, #4e6385);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /*Places buttons in the center of the screen*/
+}
+
+.calculator{
+    background: #3a4452;
+    padding: 20px; /*Thicker border*/
+    border-radius: 10px; /*Rounded box*/
+    margin: 0 auto;
+}
+
+.calculator form input{
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),5px 5px 15px rgba(0, 0, 0, 0.2); /*shifted 8px to the left, 8px upwards, and 15px blur intensity*/
+    text-align:center; 
+    background: transparent;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+}
+
+form .display{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+form .display input{ /*Allows for any level of nesting*/
+    text-align: right;
+    flex: 1; /*Will grow to fit available space*/
+    font-size: 45px;
+    box-shadow: none;
+}
+
+form  input.equal{ /*Specifically targets a direct child relationship*/ 
+    width: 145px;
+}
+
+form input.operator{
+    color: #33ffd8;
+}
